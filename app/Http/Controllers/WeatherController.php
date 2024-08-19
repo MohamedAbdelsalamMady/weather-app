@@ -10,7 +10,7 @@ class WeatherController extends Controller
     public function getWeather(Request $request)
     {
         $client = new Client();
-        $country = $request->input('country');
+        $country = $request->input('country', 'Egypt');
         $apiKey = '230b2cf0d7784712a59204342241808'; // Replace with your actual WeatherAPI key
 
         // Build the API request URL
